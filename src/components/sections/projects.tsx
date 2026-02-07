@@ -6,7 +6,7 @@ interface Project {
   title: string;
   category: string;
   description: string;
-  provider: "drive" | "youtube";
+  provider: "drive" | "youtube" | "vimeo";
   videoId: string;
   clipStart: number;
   clipEnd: number;
@@ -43,6 +43,16 @@ const projects: Project[] = [
     clipStart: 0,
     clipEnd: 5,
   },
+  {
+    id: 4,
+    title: "Featured Vimeo",
+    category: "Vimeo",
+    description: "Project highlight video.",
+    provider: "vimeo",
+    videoId: "1162864470",
+    clipStart: 0,
+    clipEnd: 5,
+  },
 ];
 
 const buildVideoUrl = (project: Project) => {
@@ -58,12 +68,23 @@ const buildVideoUrl = (project: Project) => {
     });
     return `https://www.youtube.com/embed/${videoId}?${params}`;
   }
+  if (project.provider === "vimeo") {
+    const params = new URLSearchParams({
+      autoplay: "1",
+      muted: "1",
+      loop: "1",
+    });
+    return `https://player.vimeo.com/video/${project.videoId}?${params}`;
+  }
 };
 
 const buildVideoLink = (project: Project) => {
   if (project.provider === "youtube") {
     const videoId = project.videoId.split("?")[0];
     return `https://youtu.be/${videoId}`;
+  }
+  if (project.provider === "vimeo") {
+    return `https://vimeo.com/${project.videoId}`;
   }
 };
 
@@ -95,7 +116,7 @@ const ProjectCard = ({
       rel="noreferrer"
     >
       <div
-        className={`relative flex-1 overflow-hidden bg-muted ${mediaClassName}`}
+        className={`relative w-full overflow-hidden bg-muted ${mediaClassName}`}
       >
         <iframe
           src={buildVideoUrl(project)}
@@ -112,16 +133,6 @@ const ProjectCard = ({
 
 const ProjectsSection = () => {
   const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
-  const bentoLayout = [
-    "md:col-span-3 md:row-span-2",
-    "md:col-span-3 md:row-span-2",
-    "md:col-span-6 md:row-span-2",
-  ];
-  const mediaSizing = [
-    "min-h-[260px] md:min-h-0",
-    "min-h-[200px] md:min-h-0",
-    "min-h-[200px] md:min-h-0",
-  ];
 
   return (
     <section id="projects" className="py-24 md:py-32 bg-background">
@@ -149,14 +160,13 @@ const ProjectsSection = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-6 auto-rows-[200px] md:auto-rows-[220px] gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <ProjectCard
               key={project.id}
               project={project}
               index={index}
-              className={bentoLayout[index] ?? "md:col-span-6 md:row-span-1"}
-              mediaClassName={mediaSizing[index] ?? "min-h-[200px] md:min-h-0"}
+              mediaClassName="aspect-video"
             />
           ))}
         </div>
