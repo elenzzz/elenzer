@@ -15,22 +15,22 @@ const socialLinks = [
     name: "Instagram",
     icon: Instagram,
     href: "https://instagram.com/elenzervisuals",
-    handle: "@elenzer",
+    handle: "@elenzervisuals",
     color:
       "hover:bg-gradient-to-br hover:from-purple-500 hover:via-pink-500 hover:to-orange-500",
   },
   {
     name: "YouTube",
     icon: Youtube,
-    href: "https://youtube.com/elenzervisuals",
-    handle: "@elenzer",
+    href: "https://youtube.com/@elenzervisuals",
+    handle: "@elenzervisuals",
     color: "hover:bg-red-500",
   },
   {
     name: "TikTok",
     icon: Tiktok,
-    href: "https://tiktok.com/elenzervisuals",
-    handle: "@elenzer",
+    href: "https://tiktok.com/@elenzervisuals",
+    handle: "@elenzervisuals",
     color: "hover:bg-black",
   },
 ];
