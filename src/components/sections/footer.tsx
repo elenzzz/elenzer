@@ -10,7 +10,7 @@ const Footer = () => {
           </p>
 
           <p className="font-body text-sm text-muted-foreground text-center">
-            © {currentYear} All Rights Reserved. Made with love for
+            © {currentYear} All Rights Reserved. Made with love by
             ducen29@gmail.com.
           </p>
         </div>
