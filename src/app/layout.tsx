@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og",
+        url: "https://www.elenzervisuals.com/og",
         width: 1200,
         height: 630,
       },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Create Next App",
     description:
       "Creative video editing portfolio of Elyana Elenzer. Showcasing a blend of cinematic storytelling and dynamic visuals. Explore my work and let's create something amazing together.",
-    images: ["/og"],
+    images: ["https://www.elenzervisuals.com/og"],
   },
 };
 
