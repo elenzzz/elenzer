@@ -99,7 +99,7 @@ const AboutSection = () => {
               <div className="flex flex-wrap gap-3">
                 {[
                   "Vlogs",
-                  "Travel Content",
+                  "Youtube",
                   "Day-in-my-Life",
                   "Get Ready With Me",
                   "Reels & Shorts",
