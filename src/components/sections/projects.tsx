@@ -15,7 +15,7 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Featured Video 03",
+    title: "The Creative Process",
     category: "YouTube",
     description: "Project highlight video.",
     provider: "youtube",
@@ -25,7 +25,7 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Featured Video 01",
+    title: "Creative Block (short-film)",
     category: "YouTube",
     description: "Project highlight video.",
     provider: "youtube",
@@ -35,7 +35,7 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Featured Video 04",
+    title: "Deep Clean With Me - Tea Renee",
     category: "YouTube",
     description: "Project highlight video.",
     provider: "youtube",
@@ -45,7 +45,7 @@ const projects: Project[] = [
   },
   {
     id: 4,
-    title: "Featured Vimeo",
+    title: "dobochobo - pack with me for europe (Re-edit)",
     category: "Vimeo",
     description: "Project highlight video.",
     provider: "vimeo",
@@ -106,7 +106,7 @@ const ProjectCard = ({
   return (
     <a
       ref={ref as any}
-      className={`project-card bg-card transition-all duration-700 flex h-full flex-col ${
+      className={`group/project project-card bg-card transition-all duration-700 flex h-full flex-col ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
       } ${className}`}
       style={{ transitionDelay: `${index * 150}ms` }}
@@ -126,6 +126,13 @@ const ProjectCard = ({
           allowFullScreen
           loading="lazy"
         />
+        <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 transition-opacity duration-300 group-hover/project:opacity-100 group-focus-visible/project:opacity-100">
+          <div className="w-full px-4 pb-4">
+            <p className="font-heading text-sm sm:text-base text-white">
+              {project.title}
+            </p>
+          </div>
+        </div>
       </div>
     </a>
   );
@@ -193,4 +200,3 @@ const ProjectsSection = () => {
 };
 
 export default ProjectsSection;
-

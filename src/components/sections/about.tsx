@@ -26,7 +26,7 @@ const AboutSection = () => {
             About Me
           </p>
           <h2 className="font-heading text-4xl md:text-5xl font-medium mb-6">
-            Hey, I'm <span className="italic text-gradient">Your Name</span>
+            Hey, I'm <span className="italic text-gradient">Elyana</span>
           </h2>
           <div className="section-divider" />
         </div>
@@ -66,24 +66,29 @@ const AboutSection = () => {
             }`}
           >
             <p className="font-body text-lg leading-relaxed text-foreground">
-              I'm a video editor with a passion for helping lifestyle creators
-              and vloggers share their stories in the most beautiful, engaging
-              way possible.
+              I’m a 24-year-old video editor from Venezuela, graduated in
+              Audiovisual Sciences and Photography. Over the last six years,
+              I’ve dedicated myself to mastering the art of video editing and
+              motion graphics.
             </p>
 
             <p className="font-body text-muted-foreground leading-relaxed">
-              Whether you're documenting your travels, sharing your daily
-              routines, or creating content that inspires your audience—I'm here
-              to transform your raw footage into polished, scroll-stopping
-              videos that feel authentically you.
+              I genuinely love the process of taking raw footage and
+              transforming it into something polished, visually beautiful, and
+              engaging. For me, it’s all about finding the right rhythm and
+              aesthetic to help a story truly resonate with its audience.
             </p>
 
             <p className="font-body text-muted-foreground leading-relaxed">
-              My editing style is all about clean aesthetics, seamless
-              transitions, and that dreamy, lifestyle vibe that makes viewers
-              want to stay and watch more. I understand the YouTube and
-              Instagram algorithm, trending styles, and what keeps audiences
-              engaged.
+              I have a real soft spot for lifestyle and vlogging content—I love
+              the challenge of taking everyday moments and turning them into
+              something visually beautiful and engaging. I’m excited to bring
+              that same eye for detail and creativity to your stories!
+            </p>
+
+            <p className="font-body text-muted-foreground leading-relaxed">
+              My favorites hobbies are: crochet, watching TV and movies, and
+              baking🧁
             </p>
 
             {/* Skills/Tags */}
@@ -117,4 +122,3 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
-

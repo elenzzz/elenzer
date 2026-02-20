@@ -1,36 +1,37 @@
 "use client";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { Instagram, Youtube, Mail, MessageCircle } from "lucide-react";
+import { Tiktok } from "@boxicons/react";
+import { Instagram, Youtube, Mail } from "lucide-react";
 
 const socialLinks = [
   {
+    name: "Email",
+    icon: Mail,
+    href: "mailto:elyana@elenzervisuals.com",
+    handle: "elyana@elenzervisuals.com",
+    color: "hover:bg-primary",
+  },
+  {
     name: "Instagram",
     icon: Instagram,
-    href: "https://instagram.com",
-    handle: "@yourusername",
+    href: "https://instagram.com/elenzer",
+    handle: "@elenzer",
     color:
       "hover:bg-gradient-to-br hover:from-purple-500 hover:via-pink-500 hover:to-orange-500",
   },
   {
     name: "YouTube",
     icon: Youtube,
-    href: "https://youtube.com",
-    handle: "@yourchannel",
+    href: "https://youtube.com/elenzer",
+    handle: "@elenzer",
     color: "hover:bg-red-500",
   },
   {
     name: "TikTok",
-    icon: MessageCircle,
-    href: "https://tiktok.com",
-    handle: "@yourtiktok",
+    icon: Tiktok,
+    href: "https://tiktok.com/elenzer",
+    handle: "@elenzer",
     color: "hover:bg-black",
-  },
-  {
-    name: "Email",
-    icon: Mail,
-    href: "mailto:hello@youremail.com",
-    handle: "hello@youremail.com",
-    color: "hover:bg-primary",
   },
 ];
 
@@ -66,8 +67,8 @@ const ContactSection = () => {
             Let's Create <span className="italic text-gradient">Together</span>
           </h2>
           <p className="font-body text-muted-foreground max-w-lg mx-auto mb-6">
-            Ready to elevate your content? Reach out through any of my socials
-            and let's chat about bringing your vision to life!
+            Ready to elevate your content? Reach out through my email and let's
+            chat about bringing your vision to life!
           </p>
           <div className="section-divider" />
         </div>
@@ -124,4 +125,3 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
-

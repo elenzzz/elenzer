@@ -61,7 +61,7 @@ const Navigation = () => {
             }}
             className="font-heading text-xl md:text-2xl font-medium text-foreground"
           >
-            <span className="italic text-gradient">Elenzer</span>
+            <span className="italic text-gradient">ElenzerVisuals</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -132,4 +132,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-

@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="font-heading text-lg">
-            <span className="italic text-gradient">Elenzer</span>
+            <span className="italic text-gradient">ElenzerVisuals</span>
           </p>
 
           <p className="font-body text-sm text-muted-foreground text-center">
@@ -20,4 +20,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
