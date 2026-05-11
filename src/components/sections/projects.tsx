@@ -25,11 +25,12 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Creative Block (short-film)",
+    title:
+      "Exploring an abandoned mall? Vlog finding random junk and haul 💖🌸💋 - Sarah Chio",
     category: "YouTube",
     description: "Project highlight video.",
     provider: "youtube",
-    videoId: "p4Xz2Fe5f2Q?si=VggOLGx-_cmn1S1o",
+    videoId: "d1pbvxhKcck?si=3gKgUJAfb0Sk3vU8",
     clipStart: 0,
     clipEnd: 5,
   },
